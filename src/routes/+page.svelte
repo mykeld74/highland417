@@ -6,7 +6,7 @@
 <section class="hero">
 	<div class="heroContent">
 		<div class="heroText">
-			<h1 class="heroTitle">Business I.T. Systems & Security</h1>
+			<h1 class="heroTitle">Business I.T. Systems & Security!</h1>
 			<h2 class="heroSubtitle">I.T. You Don't Have to Think About</h2>
 			<p class="heroDescription">
 				We design, implement, and maintain technology infrastructure for organizations that rely on
