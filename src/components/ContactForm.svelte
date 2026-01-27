@@ -5,17 +5,12 @@
 	interface ApiResponse {
 		message?: string;
 		error?: string;
-		preview?: boolean;
-		subject?: string;
-		text?: string;
-		html?: string;
 	}
 
 	let { action = '/api/contact' } = $props<{ action?: string }>();
 
 	let submitting = $state(false);
 	let result: { type: 'success' | 'error'; message: string } | null = $state(null);
-	let previewData: { subject: string; text: string; html: string } | null = $state(null);
 
 	// Auto-dismiss success messages after 4 seconds
 	$effect(() => {
@@ -30,16 +25,6 @@
 		}
 	});
 
-	// Close preview modal on Escape
-	$effect(() => {
-		if (!previewData) return;
-		const onKey = (e: KeyboardEvent) => {
-			if (e.key === 'Escape') previewData = null;
-		};
-		window.addEventListener('keydown', onKey);
-		return () => window.removeEventListener('keydown', onKey);
-	});
-
 	async function handleSubmit(event: SubmitEvent) {
 		event.preventDefault(); // Prevent default form submission and page redirect
 
@@ -47,7 +32,6 @@
 
 		submitting = true;
 		result = null;
-		previewData = null;
 
 		const form = event.currentTarget as HTMLFormElement;
 		const formData = new FormData(form);
@@ -61,17 +45,8 @@
 			const data: ApiResponse = await response.json();
 
 			if (response.ok) {
-				if (data.preview) {
-					previewData = {
-						subject: data.subject ?? '',
-						text: data.text ?? '',
-						html: data.html ?? ''
-					};
-					form.reset();
-				} else {
-					result = { type: 'success', message: data.message || 'Message sent successfully!' };
-					form.reset();
-				}
+				result = { type: 'success', message: data.message || 'Message sent successfully!' };
+				form.reset();
 			} else {
 				result = {
 					type: 'error',
@@ -122,40 +97,6 @@
 		{submitting ? 'Sending...' : 'Send Message'}
 	</button>
 </form>
-
-{#if previewData}
-	<div
-		class="modalOverlay"
-		role="button"
-		tabindex="-1"
-		aria-label="Close modal"
-		onclick={() => (previewData = null)}
-		onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), (previewData = null))}
-		transition:fade={{ duration: 200 }}
-	>
-		<div
-			class="modalContent"
-			role="dialog"
-			aria-modal="true"
-			aria-labelledby="previewTitle"
-			tabindex="-1"
-			onclick={(e) => e.stopPropagation()}
-			onkeydown={(e) => e.stopPropagation()}
-		>
-			<div class="modalHeader">
-				<h2 id="previewTitle">Email preview (Resend not configured)</h2>
-				<button type="button" class="closeButton" onclick={() => (previewData = null)} aria-label="Close">
-					×
-				</button>
-			</div>
-			<p class="previewSubject"><strong>Subject:</strong> {previewData.subject}</p>
-			<div class="previewBody">
-				{@html previewData.html}
-			</div>
-			<button type="button" class="modalCloseBtn" onclick={() => (previewData = null)}>Close</button>
-		</div>
-	</div>
-{/if}
 
 <style>
 	.contactForm {
@@ -257,95 +198,5 @@
 		background: rgba(239, 68, 68, 0.1);
 		border: 1px solid rgba(239, 68, 68, 0.3);
 		color: #fca5a5;
-	}
-
-	/* Email preview modal (when Resend not configured) */
-	.modalOverlay {
-		position: fixed;
-		inset: 0;
-		background: rgba(0, 0, 0, 0.7);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		z-index: 1000;
-		padding: 1rem;
-	}
-
-	.modalContent {
-		background: #0a0908;
-		border: 1px solid rgba(237, 209, 174, 0.2);
-		border-radius: 8px;
-		max-width: 640px;
-		width: 100%;
-		max-height: 90vh;
-		display: flex;
-		flex-direction: column;
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-	}
-
-	.modalHeader {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 1rem 1.25rem;
-		border-bottom: 1px solid rgba(237, 209, 174, 0.15);
-	}
-
-	.modalHeader h2 {
-		margin: 0;
-		font-family: 'Inter', sans-serif;
-		font-size: 1rem;
-		font-weight: 600;
-		color: var(--color-text);
-	}
-
-	.closeButton {
-		background: none;
-		border: none;
-		color: rgba(237, 209, 174, 0.7);
-		font-size: 1.5rem;
-		line-height: 1;
-		cursor: pointer;
-		padding: 0.25rem;
-	}
-
-	.closeButton:hover {
-		color: var(--color-text);
-	}
-
-	.previewSubject {
-		margin: 0;
-		padding: 1rem 1.25rem;
-		font-family: 'Inter', sans-serif;
-		font-size: 0.9rem;
-		color: var(--color-text);
-		border-bottom: 1px solid rgba(237, 209, 174, 0.1);
-	}
-
-	.previewBody {
-		flex: 1;
-		overflow: auto;
-		padding: 1rem 1.25rem;
-	}
-
-	.previewBody :global(table) {
-		max-width: 100%;
-	}
-
-	.modalCloseBtn {
-		margin: 1rem 1.25rem 1.25rem;
-		align-self: flex-start;
-		font-family: 'Inter', sans-serif;
-		font-size: 0.95rem;
-		color: var(--color-text);
-		background: transparent;
-		border: 1px solid var(--color-text);
-		padding: 0.5rem 1.25rem;
-		cursor: pointer;
-		transition: all 0.3s ease;
-	}
-
-	.modalCloseBtn:hover {
-		background: rgba(201, 166, 107, 0.1);
 	}
 </style>

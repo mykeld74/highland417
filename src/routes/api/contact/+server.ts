@@ -26,13 +26,9 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 		// Try platform.env first (Cloudflare), then process.env (Node.js), then import.meta.env (Vite)
 		const env = platform?.env as Record<string, string | undefined> | undefined;
 		const resendApiKey =
-			env?.RESEND_API_KEY ||
-			process.env.RESEND_API_KEY ||
-			import.meta.env.RESEND_API_KEY;
+			env?.RESEND_API_KEY || process.env.RESEND_API_KEY || import.meta.env.RESEND_API_KEY;
 		const toEmail =
-			env?.CONTACT_EMAIL ||
-			process.env.CONTACT_EMAIL ||
-			import.meta.env.CONTACT_EMAIL;
+			env?.CONTACT_EMAIL || process.env.CONTACT_EMAIL || import.meta.env.CONTACT_EMAIL;
 		const fromEmail =
 			env?.FROM_EMAIL ||
 			process.env.FROM_EMAIL ||
@@ -42,7 +38,10 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 		// Inline the SVG logo and set size to 150px
 		const logoSvg = logoSvgContent
 			.replace(/<\?xml[^>]*\?>/i, '')
-			.replace(/<svg([^>]*)>/, '<svg$1 width="150" height="150" style="width: 150px; height: 150px; max-width: 150px; display: block; margin: 0 auto;">');
+			.replace(
+				/<svg([^>]*)>/,
+				'<svg$1 width="150" height="150" style="width: 150px; height: 150px; max-width: 150px; display: block; margin: 0 auto;">'
+			);
 
 		// HTML escape function for security
 		function escapeHtml(text: string): string {
@@ -165,8 +164,7 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 					<tr>
 						<td style="padding: 30px 40px; text-align: center; border-top: 1px solid rgba(237, 209, 174, 0.1);">
 							<p style="margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: rgba(237, 209, 174, 0.6); line-height: 1.5;">
-								This email was sent from the Highland 417 contact form.<br>
-								You can reply directly to this email to respond to ${safeName}.
+								This email was sent from the Highland 417 contact form.
 							</p>
 						</td>
 					</tr>
@@ -225,11 +223,11 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 </html>
 		`;
 
-		// When Resend isn't configured, return preview for modal (swap in Resend when ready)
 		if (!resendApiKey || !toEmail) {
+			console.error('Missing Resend configuration');
 			return json(
-				{ preview: true, subject, text: textEmail, html: htmlEmail },
-				{ status: 200 }
+				{ error: 'Email service is not configured. Please contact the administrator.' },
+				{ status: 500 }
 			);
 		}
 
@@ -247,9 +245,6 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 		return json({ message: 'Message sent successfully!' }, { status: 200 });
 	} catch (error) {
 		console.error('Error sending email:', error);
-		return json(
-			{ error: 'Failed to send message. Please try again later.' },
-			{ status: 500 }
-		);
+		return json({ error: 'Failed to send message. Please try again later.' }, { status: 500 });
 	}
 };
