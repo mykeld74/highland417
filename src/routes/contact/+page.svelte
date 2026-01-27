@@ -28,9 +28,14 @@
 	.contactContent {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 'info form';
 		gap: 4rem;
 		align-items: start;
 		margin-top: 2rem;
+		@media (max-width: 968px) {
+			grid-template-columns: 1fr;
+			grid-template-areas: 'form' 'info';
+		}
 	}
 
 	.contactInfo {
@@ -38,6 +43,7 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 1.5rem;
+		grid-area: info;
 	}
 
 	.contactImage {
@@ -52,7 +58,7 @@
 
 	.contactDescription {
 		font-family: 'Inter', sans-serif;
-		font-size: 1.1rem;
+		font-size: clamp(1.1rem, 2.5vw, 2rem);
 		text-align: center;
 		color: var(--color-text);
 		line-height: 1.6;
@@ -61,6 +67,7 @@
 	.contactFormWrapper {
 		display: flex;
 		flex-direction: column;
+		grid-area: form;
 	}
 
 	@media (max-width: 968px) {

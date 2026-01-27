@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 import { logoSvgContent } from '$lib/logo';
 
 export const POST: RequestHandler = async ({ request, platform }) => {
@@ -22,27 +22,13 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 			return json({ error: 'Invalid email address' }, { status: 400 });
 		}
 
-		// Get SMTP configuration from environment variables
+		// Get Resend configuration from environment variables
 		// Try platform.env first (Cloudflare), then process.env (Node.js), then import.meta.env (Vite)
 		const env = platform?.env as Record<string, string | undefined> | undefined;
-		const smtpHost =
-			env?.SMTP_HOST ||
-			process.env.SMTP_HOST ||
-			import.meta.env.SMTP_HOST;
-		const smtpPort = parseInt(
-			env?.SMTP_PORT ||
-				process.env.SMTP_PORT ||
-				import.meta.env.SMTP_PORT ||
-				'587'
-		);
-		const smtpUser =
-			env?.SMTP_USER ||
-			process.env.SMTP_USER ||
-			import.meta.env.SMTP_USER;
-		const smtpPass =
-			env?.SMTP_PASSWORD ||
-			process.env.SMTP_PASSWORD ||
-			import.meta.env.SMTP_PASSWORD;
+		const resendApiKey =
+			env?.RESEND_API_KEY ||
+			process.env.RESEND_API_KEY ||
+			import.meta.env.RESEND_API_KEY;
 		const toEmail =
 			env?.CONTACT_EMAIL ||
 			process.env.CONTACT_EMAIL ||
@@ -51,31 +37,12 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 			env?.FROM_EMAIL ||
 			process.env.FROM_EMAIL ||
 			import.meta.env.FROM_EMAIL ||
-			smtpUser;
+			'onboarding@resend.dev'; // Default Resend email for testing
 
 		// Inline the SVG logo and set size to 150px
 		const logoSvg = logoSvgContent
 			.replace(/<\?xml[^>]*\?>/i, '')
 			.replace(/<svg([^>]*)>/, '<svg$1 width="150" height="150" style="width: 150px; height: 150px; max-width: 150px; display: block; margin: 0 auto;">');
-
-		if (!smtpHost || !smtpUser || !smtpPass || !toEmail) {
-			console.error('Missing SMTP configuration');
-			return json(
-				{ error: 'Email service is not configured. Please contact the administrator.' },
-				{ status: 500 }
-			);
-		}
-
-		// Create transporter
-		const transporter = nodemailer.createTransport({
-			host: smtpHost,
-			port: smtpPort,
-			secure: smtpPort === 465, // true for 465, false for other ports
-			auth: {
-				user: smtpUser,
-				pass: smtpPass
-			}
-		});
 
 		// HTML escape function for security
 		function escapeHtml(text: string): string {
@@ -98,6 +65,8 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 
 		// Email content
 		const phoneText = phone ? `\nPhone: ${phone}` : '';
+		const subject = `Contact Form Submission from ${name}`;
+		const textEmail = `Contact Form Submission\n\nName: ${name}\nEmail: ${email}${phoneText}\n\nMessage:\n${message}`;
 		const phoneHtml = phone
 			? `<tr>
 					<td style="padding: 12px 0; border-bottom: 1px solid rgba(237, 209, 174, 0.1);">
@@ -256,17 +225,24 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 </html>
 		`;
 
-		const mailOptions = {
-			from: `"${name}" <${fromEmail}>`,
-			replyTo: email,
-			to: toEmail,
-			subject: `Contact Form Submission from ${name}`,
-			text: `Contact Form Submission\n\nName: ${name}\nEmail: ${email}${phoneText}\n\nMessage:\n${message}`,
-			html: htmlEmail
-		};
+		// When Resend isn't configured, return preview for modal (swap in Resend when ready)
+		if (!resendApiKey || !toEmail) {
+			return json(
+				{ preview: true, subject, text: textEmail, html: htmlEmail },
+				{ status: 200 }
+			);
+		}
 
-		// Send email
-		await transporter.sendMail(mailOptions);
+		// Send email using Resend
+		const resend = new Resend(resendApiKey);
+		await resend.emails.send({
+			from: fromEmail,
+			to: toEmail,
+			replyTo: email,
+			subject,
+			text: textEmail,
+			html: htmlEmail
+		});
 
 		return json({ message: 'Message sent successfully!' }, { status: 200 });
 	} catch (error) {
