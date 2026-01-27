@@ -1,6 +1,7 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
 	import Nav from '$components/Nav.svelte';
+	import ConsultationModal from '$components/ConsultationModal.svelte';
 	import '$css/reset.css';
 	import '$css/styles.css';
 
@@ -18,6 +19,8 @@
 </svelte:head>
 
 <Nav />
+
+<ConsultationModal />
 
 <main class="grainBg">
 	{@render children()}

@@ -7,7 +7,7 @@
 		error?: string;
 	}
 
-	let { action = '/api/contact' } = $props<{ action?: string }>();
+	let { action = '/api/contact', onSuccess } = $props<{ action?: string; onSuccess?: () => void }>();
 
 	let submitting = $state(false);
 	let result: { type: 'success' | 'error'; message: string } | null = $state(null);
@@ -47,6 +47,7 @@
 			if (response.ok) {
 				result = { type: 'success', message: data.message || 'Message sent successfully!' };
 				form.reset();
+				onSuccess?.();
 			} else {
 				result = {
 					type: 'error',

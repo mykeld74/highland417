@@ -1,6 +1,7 @@
 <script lang="ts">
 	import logo from '$img/logo.svg';
 	import Icon from '$components/Icon.svelte';
+	import { consultationModalOpen } from '$lib/stores/consultationModal';
 </script>
 
 <section class="hero">
@@ -13,7 +14,7 @@
 				technology to operate. No consumer tech support model. No one-size-fits-all stacks. No
 				unnecessary complexity.
 			</p>
-			<button class="heroButton">Schedule a Consultation</button>
+			<button type="button" class="heroButton" onclick={() => consultationModalOpen.set(true)}>Schedule a Consultation</button>
 		</div>
 		<div class="heroImage">
 			<img src={logo} alt="Highland 417" class="heroLogo" />

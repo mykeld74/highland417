@@ -1,5 +1,6 @@
 <script lang="ts">
 	import logo from '$img/logo.svg';
+	import { consultationModalOpen } from '$lib/stores/consultationModal';
 </script>
 
 <nav class="nav">
@@ -11,7 +12,7 @@
 			<a href="/services">Services</a>
 			<a href="/approach">Approach</a>
 			<a href="/contact">Contact</a>
-			<button class="navButton">Schedule a Consultation</button>
+			<button type="button" class="navButton" onclick={() => consultationModalOpen.set(true)}>Schedule a Consultation</button>
 		</div>
 	</div>
 </nav>
