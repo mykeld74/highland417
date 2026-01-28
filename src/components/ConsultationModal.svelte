@@ -87,20 +87,6 @@
 		color: var(--color-text);
 	}
 
-	.closeBtn {
-		background: none;
-		border: none;
-		color: rgba(237, 209, 174, 0.7);
-		font-size: 1.5rem;
-		line-height: 1;
-		cursor: pointer;
-		padding: 0.25rem;
-	}
-
-	.closeBtn:hover {
-		color: var(--color-text);
-	}
-
 	.body {
 		flex: 1;
 		overflow: auto;

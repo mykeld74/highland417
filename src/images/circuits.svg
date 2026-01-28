@@ -1,6 +1,55 @@
 <svg width="3500" height="1152" viewBox="0 0 3500 1152" fill="none"
   xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <filter id="dotGlow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur id="glowBlur1" in="SourceGraphic" stdDeviation="25" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="dotGlow2" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur id="glowBlur2" in="SourceGraphic" stdDeviation="25" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="dotGlow3" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur id="glowBlur3" in="SourceGraphic" stdDeviation="25" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="dotGlow4" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur id="glowBlur4" in="SourceGraphic" stdDeviation="25" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="dotGlow5" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur id="glowBlur5" in="SourceGraphic" stdDeviation="25" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="dotGlow6" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur id="glowBlur6" in="SourceGraphic" stdDeviation="25" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="packetBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
     <linearGradient id="copperGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#B87333;stop-opacity:1" />
       <stop offset="50%" style="stop-color:#CD7F32;stop-opacity:1" />
@@ -12,99 +61,200 @@
       <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <path d="M433.8 76H1071.5L1145.5 2H1635.5L1799.5 166H2051.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M434.5 91C426.2 91 419.5 84.3 419.5 76C419.5 67.7 426.2 61 434.5 61C442.8 61 449.5 67.7 449.5 76C449.5 84.3 442.8 91 434.5 91Z" fill="url(#copperGradientDark)"/>
-  <path d="M2050.5 181C2058.8 181 2065.5 174.3 2065.5 166C2065.5 157.7 2058.8 151 2050.5 151C2042.2 151 2035.5 157.7 2035.5 166C2035.5 174.3 2042.2 181 2050.5 181Z" fill="url(#copperGradientDark)"/>
-  <path d="M-48.2002 25H213.5L309 120.5H732.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M731.5 135.5C739.8 135.5 746.5 128.8 746.5 120.5C746.5 112.2 739.8 105.5 731.5 105.5C723.2 105.5 716.5 112.2 716.5 120.5C716.5 128.8 723.2 135.5 731.5 135.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M-168.2 804H515.5L611 708.5H883.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M882.5 723.5C890.8 723.5 897.5 716.8 897.5 708.5C897.5 700.2 890.8 693.5 882.5 693.5C874.2 693.5 867.5 700.2 867.5 708.5C867.5 716.8 874.2 723.5 882.5 723.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M515.8 204H962.5L1047.5 119H1635.5L1716 199.5H2148.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M516.5 219C508.2 219 501.5 212.3 501.5 204C501.5 195.7 508.2 189 516.5 189C524.8 189 531.5 195.7 531.5 204C531.5 212.3 524.8 219 516.5 219Z" fill="url(#copperGradientDark)"/>
-  <path d="M2147.5 214.5C2155.8 214.5 2162.5 207.8 2162.5 199.5C2162.5 191.2 2155.8 184.5 2147.5 184.5C2139.2 184.5 2132.5 191.2 2132.5 199.5C2132.5 207.8 2139.2 214.5 2147.5 214.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M1182.8 73H1524.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M1183.5 88C1175.2 88 1168.5 81.3 1168.5 73C1168.5 64.7 1175.2 58 1183.5 58C1191.8 58 1198.5 64.7 1198.5 73C1198.5 81.3 1191.8 88 1183.5 88Z" fill="url(#copperGradientDark)"/>
-  <path d="M1523.5 88C1531.8 88 1538.5 81.3 1538.5 73C1538.5 64.7 1531.8 58 1523.5 58C1515.2 58 1508.5 64.7 1508.5 73C1508.5 81.3 1515.2 88 1523.5 88Z" fill="url(#copperGradientDark)"/>
-  <path d="M1618.8 231H1756.5L1841.5 316H2420.5H3235.5L3358.5 439H3540.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M1619.5 246C1611.2 246 1604.5 239.3 1604.5 231C1604.5 222.7 1611.2 216 1619.5 216C1627.8 216 1634.5 222.7 1634.5 231C1634.5 239.3 1627.8 246 1619.5 246Z" fill="url(#copperGradientDark)"/>
-  <path d="M2090.6 267.901L2125 233.501H2487.5L2556.8 164.301H3106.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M2101.8 278C2095.9 283.9 2086.4 283.9 2080.5 278C2074.6 272.1 2074.6 262.6 2080.5 256.7C2086.4 250.8 2095.9 250.8 2101.8 256.7C2107.7 262.6 2107.7 272.1 2101.8 278Z" fill="url(#copperGradientDark)"/>
-  <path d="M3105.5 179.301C3113.8 179.301 3120.5 172.601 3120.5 164.301C3120.5 156.001 3113.8 149.301 3105.5 149.301C3097.2 149.301 3090.5 156.001 3090.5 164.301C3090.5 172.601 3097.2 179.301 3105.5 179.301Z" fill="url(#copperGradientDark)"/>
-  <path d="M2755.8 255H3269.5L3376 361.5H3643.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M2756.5 270C2748.2 270 2741.5 263.3 2741.5 255C2741.5 246.7 2748.2 240 2756.5 240C2764.8 240 2771.5 246.7 2771.5 255C2771.5 263.3 2764.8 270 2756.5 270Z" fill="url(#copperGradientDark)"/>
-  <path d="M312.8 308H732.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M313.5 323C305.2 323 298.5 316.3 298.5 308C298.5 299.7 305.2 293 313.5 293C321.8 293 328.5 299.7 328.5 308C328.5 316.3 321.8 323 313.5 323Z" fill="url(#copperGradientDark)"/>
-  <path d="M731.5 323C739.8 323 746.5 316.3 746.5 308C746.5 299.7 739.8 293 731.5 293C723.2 293 716.5 299.7 716.5 308C716.5 316.3 723.2 323 731.5 323Z" fill="url(#copperGradientDark)"/>
-  <path d="M693.3 385.699H522.5L422.6 490.999H246.3" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M692.6 370.699C700.9 370.699 707.6 377.399 707.6 385.699C707.6 393.999 700.9 400.699 692.6 400.699C684.3 400.699 677.6 393.999 677.6 385.699C677.6 377.399 684.3 370.699 692.6 370.699Z" fill="url(#copperGradientDark)"/>
-  <path d="M247 476C238.7 476 232 482.7 232 491C232 499.3 238.7 506 247 506C255.3 506 262 499.3 262 491C262 482.7 255.3 476 247 476Z" fill="url(#copperGradientDark)"/>
-  <path d="M573.8 439H1125.5L1164.5 400H1259.5L1328 331.5H1784.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M574.5 454C566.2 454 559.5 447.3 559.5 439C559.5 430.7 566.2 424 574.5 424C582.8 424 589.5 430.7 589.5 439C589.5 447.3 582.8 454 574.5 454Z" fill="url(#copperGradientDark)"/>
-  <path d="M1783.5 346.5C1791.8 346.5 1798.5 339.8 1798.5 331.5C1798.5 323.2 1791.8 316.5 1783.5 316.5C1775.2 316.5 1768.5 323.2 1768.5 331.5C1768.5 339.8 1775.2 346.5 1783.5 346.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M1345.8 462H1695.5L1776 381.5H2632.5L2892.8 641.7H3276.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M1346.5 477C1338.2 477 1331.5 470.3 1331.5 462C1331.5 453.7 1338.2 447 1346.5 447C1354.8 447 1361.5 453.7 1361.5 462C1361.5 470.3 1354.8 477 1346.5 477Z" fill="url(#copperGradientDark)"/>
-  <path d="M3275.5 656.801C3283.8 656.801 3290.5 650.101 3290.5 641.801C3290.5 633.501 3283.8 626.801 3275.5 626.801C3267.2 626.801 3260.5 633.501 3260.5 641.801C3260.5 650.101 3267.2 656.801 3275.5 656.801Z" fill="url(#copperGradientDark)"/>
-  <path d="M2971.8 601H3249.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M2972.5 616C2964.2 616 2957.5 609.3 2957.5 601C2957.5 592.7 2964.2 586 2972.5 586C2980.8 586 2987.5 592.7 2987.5 601C2987.5 609.3 2980.8 616 2972.5 616Z" fill="url(#copperGradientDark)"/>
-  <path d="M3248.5 616C3256.8 616 3263.5 609.3 3263.5 601C3263.5 592.7 3256.8 586 3248.5 586C3240.2 586 3233.5 592.7 3233.5 601C3233.5 609.3 3240.2 616 3248.5 616Z" fill="url(#copperGradientDark)"/>
-  <path d="M2776.8 438H3217.5L3388.4 608.9" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M2777.5 453C2769.2 453 2762.5 446.3 2762.5 438C2762.5 429.7 2769.2 423 2777.5 423C2785.8 423 2792.5 429.7 2792.5 438C2792.5 446.3 2785.8 453 2777.5 453Z" fill="url(#copperGradientDark)"/>
-  <path d="M3377.2 619C3383.1 624.9 3392.6 624.9 3398.5 619C3404.4 613.1 3404.4 603.6 3398.5 597.7C3392.6 591.8 3383.1 591.8 3377.2 597.7C3371.3 603.6 3371.3 613.1 3377.2 619Z" fill="url(#copperGradientDark)"/>
-  <path d="M1767.8 439H2478.5L2715.5 676H2926.5L3076.5 826H3200.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M1768.5 454C1760.2 454 1753.5 447.3 1753.5 439C1753.5 430.7 1760.2 424 1768.5 424C1776.8 424 1783.5 430.7 1783.5 439C1783.5 447.3 1776.8 454 1768.5 454Z" fill="url(#copperGradientDark)"/>
-  <path d="M3199.5 841C3207.8 841 3214.5 834.3 3214.5 826C3214.5 817.7 3207.8 811 3199.5 811C3191.2 811 3184.5 817.7 3184.5 826C3184.5 834.3 3191.2 841 3199.5 841Z" fill="url(#copperGradientDark)"/>
-  <path d="M94.2998 552.5H539.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M95 567.5C86.7 567.5 80 560.8 80 552.5C80 544.2 86.7 537.5 95 537.5C103.3 537.5 110 544.2 110 552.5C110 560.8 103.3 567.5 95 567.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M539 567.5C547.3 567.5 554 560.8 554 552.5C554 544.2 547.3 537.5 539 537.5C530.7 537.5 524 544.2 524 552.5C524 560.8 530.7 567.5 539 567.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M62.2998 683.5H507.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M63 698.5C54.7 698.5 48 691.8 48 683.5C48 675.2 54.7 668.5 63 668.5C71.3 668.5 78 675.2 78 683.5C78 691.8 71.3 698.5 63 698.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M507 698.5C515.3 698.5 522 691.8 522 683.5C522 675.2 515.3 668.5 507 668.5C498.7 668.5 492 675.2 492 683.5C492 691.8 498.7 698.5 507 698.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M2281.3 795.5H2726.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M2282 810.5C2273.7 810.5 2267 803.8 2267 795.5C2267 787.2 2273.7 780.5 2282 780.5C2290.3 780.5 2297 787.2 2297 795.5C2297 803.8 2290.3 810.5 2282 810.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M2726 810.5C2734.3 810.5 2741 803.8 2741 795.5C2741 787.2 2734.3 780.5 2726 780.5C2717.7 780.5 2711 787.2 2711 795.5C2711 803.8 2717.7 810.5 2726 810.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M1875.3 523.5H2320.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M1876 538.5C1867.7 538.5 1861 531.8 1861 523.5C1861 515.2 1867.7 508.5 1876 508.5C1884.3 508.5 1891 515.2 1891 523.5C1891 531.8 1884.3 538.5 1876 538.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M2320 538.5C2328.3 538.5 2335 531.8 2335 523.5C2335 515.2 2328.3 508.5 2320 508.5C2311.7 508.5 2305 515.2 2305 523.5C2305 531.8 2311.7 538.5 2320 538.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M1094.3 197.5H1539.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M1095 212.5C1086.7 212.5 1080 205.8 1080 197.5C1080 189.2 1086.7 182.5 1095 182.5C1103.3 182.5 1110 189.2 1110 197.5C1110 205.8 1103.3 212.5 1095 212.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M1539 212.5C1547.3 212.5 1554 205.8 1554 197.5C1554 189.2 1547.3 182.5 1539 182.5C1530.7 182.5 1524 189.2 1524 197.5C1524 205.8 1530.7 212.5 1539 212.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M926.3 258.5H1371.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M927 273.5C918.7 273.5 912 266.8 912 258.5C912 250.2 918.7 243.5 927 243.5C935.3 243.5 942 250.2 942 258.5C942 266.8 935.3 273.5 927 273.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M1371 273.5C1379.3 273.5 1386 266.8 1386 258.5C1386 250.2 1379.3 243.5 1371 243.5C1362.7 243.5 1356 250.2 1356 258.5C1356 266.8 1362.7 273.5 1371 273.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M805.3 308.5H1250.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M806 323.5C797.7 323.5 791 316.8 791 308.5C791 300.2 797.7 293.5 806 293.5C814.3 293.5 821 300.2 821 308.5C821 316.8 814.3 323.5 806 323.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M1250 323.5C1258.3 323.5 1265 316.8 1265 308.5C1265 300.2 1258.3 293.5 1250 293.5C1241.7 293.5 1235 300.2 1235 308.5C1235 316.8 1241.7 323.5 1250 323.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M483.8 601.001H898.5L1053.5 756.001H1168.5L1307 617.501H1996.5L2040.8 573.301H2290.5L2457.4 740.101H2888.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M484.5 616C476.2 616 469.5 609.3 469.5 601C469.5 592.7 476.2 586 484.5 586C492.8 586 499.5 592.7 499.5 601C499.5 609.3 492.8 616 484.5 616Z" fill="url(#copperGradientDark)"/>
-  <path d="M2887.5 755.201C2895.8 755.201 2902.5 748.501 2902.5 740.201C2902.5 731.901 2895.8 725.201 2887.5 725.201C2879.2 725.201 2872.5 731.901 2872.5 740.201C2872.5 748.501 2879.2 755.201 2887.5 755.201Z" fill="url(#copperGradientDark)"/>
-  <path d="M2324.8 843H2579.5L2690 953.5H2902.5L2992.2 863.7H3227.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M2325.5 858C2317.2 858 2310.5 851.3 2310.5 843C2310.5 834.7 2317.2 828 2325.5 828C2333.8 828 2340.5 834.7 2340.5 843C2340.5 851.3 2333.8 858 2325.5 858Z" fill="url(#copperGradientDark)"/>
-  <path d="M3226.5 878.801C3234.8 878.801 3241.5 872.101 3241.5 863.801C3241.5 855.501 3234.8 848.801 3226.5 848.801C3218.2 848.801 3211.5 855.501 3211.5 863.801C3211.5 872.101 3218.2 878.801 3226.5 878.801Z" fill="url(#copperGradientDark)"/>
-  <path d="M2206.6 853.1L2354 1000.5H2497.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M2196.5 864.299C2190.6 858.399 2190.6 848.899 2196.5 842.999C2202.4 837.099 2211.9 837.099 2217.8 842.999C2223.7 848.899 2223.7 858.399 2217.8 864.299C2211.9 870.199 2202.4 870.199 2196.5 864.299Z" fill="url(#copperGradientDark)"/>
-  <path d="M2496.5 1015.5C2504.8 1015.5 2511.5 1008.8 2511.5 1000.5C2511.5 992.2 2504.8 985.5 2496.5 985.5C2488.2 985.5 2481.5 992.2 2481.5 1000.5C2481.5 1008.8 2488.2 1015.5 2496.5 1015.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M1763.6 857.9L1826.5 795H1889.5L1955 860.5H2148.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M1774.8 868C1768.9 873.9 1759.4 873.9 1753.5 868C1747.6 862.1 1747.6 852.6 1753.5 846.7C1759.4 840.8 1768.9 840.8 1774.8 846.7C1780.7 852.6 1780.7 862.1 1774.8 868Z" fill="url(#copperGradientDark)"/>
-  <path d="M2147.5 875.5C2155.8 875.5 2162.5 868.8 2162.5 860.5C2162.5 852.2 2155.8 845.5 2147.5 845.5C2139.2 845.5 2132.5 852.2 2132.5 860.5C2132.5 868.8 2139.2 875.5 2147.5 875.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M1712.8 683H1865.5L1967.5 785H2215.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M1713.5 698C1705.2 698 1698.5 691.3 1698.5 683C1698.5 674.7 1705.2 668 1713.5 668C1721.8 668 1728.5 674.7 1728.5 683C1728.5 691.3 1721.8 698 1713.5 698Z" fill="url(#copperGradientDark)"/>
-  <path d="M2214.5 800C2222.8 800 2229.5 793.3 2229.5 785C2229.5 776.7 2222.8 770 2214.5 770C2206.2 770 2199.5 776.7 2199.5 785C2199.5 793.3 2206.2 800 2214.5 800Z" fill="url(#copperGradientDark)"/>
-  <path d="M1274.6 734.1L1375 834.5H1680.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M1264.5 745.299C1258.6 739.399 1258.6 729.899 1264.5 723.999C1270.4 718.099 1279.9 718.099 1285.8 723.999C1291.7 729.899 1291.7 739.399 1285.8 745.299C1279.9 751.199 1270.4 751.199 1264.5 745.299Z" fill="url(#copperGradientDark)"/>
-  <path d="M1679.5 849.5C1687.8 849.5 1694.5 842.8 1694.5 834.5C1694.5 826.2 1687.8 819.5 1679.5 819.5C1671.2 819.5 1664.5 826.2 1664.5 834.5C1664.5 842.8 1671.2 849.5 1679.5 849.5Z" fill="url(#copperGradientDark)"/>
-  <path d="M115.8 868H1016.5L1107.5 777H1227.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M116.5 883C108.2 883 101.5 876.3 101.5 868C101.5 859.7 108.2 853 116.5 853C124.8 853 131.5 859.7 131.5 868C131.5 876.3 124.8 883 116.5 883Z" fill="url(#copperGradientDark)"/>
-  <path d="M1226.5 792C1234.8 792 1241.5 785.3 1241.5 777C1241.5 768.7 1234.8 762 1226.5 762C1218.2 762 1211.5 768.7 1211.5 777C1211.5 785.3 1218.2 792 1226.5 792Z" fill="url(#copperGradientDark)"/>
-  <path d="M1330.8 922H1604.5L1832.5 1150H2259.5L2346 1063.5H2887.5L3021.8 929.3H3276.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M1331.5 937C1323.2 937 1316.5 930.3 1316.5 922C1316.5 913.7 1323.2 907 1331.5 907C1339.8 907 1346.5 913.7 1346.5 922C1346.5 930.3 1339.8 937 1331.5 937Z" fill="url(#copperGradientDark)"/>
-  <path d="M3275.5 944.301C3283.8 944.301 3290.5 937.601 3290.5 929.301C3290.5 921.001 3283.8 914.301 3275.5 914.301C3267.2 914.301 3260.5 921.001 3260.5 929.301C3260.5 937.601 3267.2 944.301 3275.5 944.301Z" fill="url(#copperGradientDark)"/>
-  <path d="M1808.6 978.1L1912.5 1082H2169.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M1798.5 989.299C1792.6 983.399 1792.6 973.899 1798.5 967.999C1804.4 962.099 1813.9 962.099 1819.8 967.999C1825.7 973.899 1825.7 983.399 1819.8 989.299C1813.9 995.199 1804.4 995.199 1798.5 989.299Z" fill="url(#copperGradientDark)"/>
-  <path d="M2168.5 1097C2176.8 1097 2183.5 1090.3 2183.5 1082C2183.5 1073.7 2176.8 1067 2168.5 1067C2160.2 1067 2153.5 1073.7 2153.5 1082C2153.5 1090.3 2160.2 1097 2168.5 1097Z" fill="url(#copperGradientDark)"/>
-  <path d="M861.8 512H1387.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M862.5 527C854.2 527 847.5 520.3 847.5 512C847.5 503.7 854.2 497 862.5 497C870.8 497 877.5 503.7 877.5 512C877.5 520.3 870.8 527 862.5 527Z" fill="url(#copperGradientDark)"/>
-  <path d="M1386.5 527C1394.8 527 1401.5 520.3 1401.5 512C1401.5 503.7 1394.8 497 1386.5 497C1378.2 497 1371.5 503.7 1371.5 512C1371.5 520.3 1378.2 527 1386.5 527Z" fill="url(#copperGradientDark)"/>
-  <path d="M1349.8 398H1646.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
-  <path d="M1350.5 413C1342.2 413 1335.5 406.3 1335.5 398C1335.5 389.7 1342.2 383 1350.5 383C1358.8 383 1365.5 389.7 1365.5 398C1365.5 406.3 1358.8 413 1350.5 413Z" fill="url(#copperGradientDark)"/>
-  <path d="M1645.5 413C1653.8 413 1660.5 406.3 1660.5 398C1660.5 389.7 1653.8 383 1645.5 383C1637.2 383 1630.5 389.7 1630.5 398C1630.5 406.3 1637.2 413 1645.5 413Z" fill="url(#copperGradientDark)"/>
+  <path id="pathCircuit1" d="M433.8 76H1071.5L1145.5 2H1635.5L1799.5 166H2051.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M434.5 91C426.2 91 419.5 84.3 419.5 76C419.5 67.7 426.2 61 434.5 61C442.8 61 449.5 67.7 449.5 76C449.5 84.3 442.8 91 434.5 91Z" fill="url(#copperGradientDark)" filter="url(#dotGlow)"/>
+  <path d="M2050.5 181C2058.8 181 2065.5 174.3 2065.5 166C2065.5 157.7 2058.8 151 2050.5 151C2042.2 151 2035.5 157.7 2035.5 166C2035.5 174.3 2042.2 181 2050.5 181Z" fill="url(#copperGradientDark)" filter="url(#dotGlow2)"/>
+  <path id="pathCircuit2" d="M-48.2002 25H213.5L309 120.5H732.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M731.5 135.5C739.8 135.5 746.5 128.8 746.5 120.5C746.5 112.2 739.8 105.5 731.5 105.5C723.2 105.5 716.5 112.2 716.5 120.5C716.5 128.8 723.2 135.5 731.5 135.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow3)"/>
+  <path id="pathCircuit3" d="M-168.2 804H515.5L611 708.5H883.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M882.5 723.5C890.8 723.5 897.5 716.8 897.5 708.5C897.5 700.2 890.8 693.5 882.5 693.5C874.2 693.5 867.5 700.2 867.5 708.5C867.5 716.8 874.2 723.5 882.5 723.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow4)"/>
+  <path id="pathCircuit4" d="M515.8 204H962.5L1047.5 119H1635.5L1716 199.5H2148.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M516.5 219C508.2 219 501.5 212.3 501.5 204C501.5 195.7 508.2 189 516.5 189C524.8 189 531.5 195.7 531.5 204C531.5 212.3 524.8 219 516.5 219Z" fill="url(#copperGradientDark)" filter="url(#dotGlow5)"/>
+  <path d="M2147.5 214.5C2155.8 214.5 2162.5 207.8 2162.5 199.5C2162.5 191.2 2155.8 184.5 2147.5 184.5C2139.2 184.5 2132.5 191.2 2132.5 199.5C2132.5 207.8 2139.2 214.5 2147.5 214.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow6)"/>
+  <path id="pathCircuit5" d="M1182.8 73H1524.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M1183.5 88C1175.2 88 1168.5 81.3 1168.5 73C1168.5 64.7 1175.2 58 1183.5 58C1191.8 58 1198.5 64.7 1198.5 73C1198.5 81.3 1191.8 88 1183.5 88Z" fill="url(#copperGradientDark)" filter="url(#dotGlow)"/>
+  <path d="M1523.5 88C1531.8 88 1538.5 81.3 1538.5 73C1538.5 64.7 1531.8 58 1523.5 58C1515.2 58 1508.5 64.7 1508.5 73C1508.5 81.3 1515.2 88 1523.5 88Z" fill="url(#copperGradientDark)" filter="url(#dotGlow2)"/>
+  <path id="pathCircuit6" d="M1618.8 231H1756.5L1841.5 316H2420.5H3235.5L3358.5 439H3540.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M1619.5 246C1611.2 246 1604.5 239.3 1604.5 231C1604.5 222.7 1611.2 216 1619.5 216C1627.8 216 1634.5 222.7 1634.5 231C1634.5 239.3 1627.8 246 1619.5 246Z" fill="url(#copperGradientDark)" filter="url(#dotGlow3)"/>
+  <path id="pathCircuit7" d="M2090.6 267.901L2125 233.501H2487.5L2556.8 164.301H3106.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M2101.8 278C2095.9 283.9 2086.4 283.9 2080.5 278C2074.6 272.1 2074.6 262.6 2080.5 256.7C2086.4 250.8 2095.9 250.8 2101.8 256.7C2107.7 262.6 2107.7 272.1 2101.8 278Z" fill="url(#copperGradientDark)" filter="url(#dotGlow4)"/>
+  <path d="M3105.5 179.301C3113.8 179.301 3120.5 172.601 3120.5 164.301C3120.5 156.001 3113.8 149.301 3105.5 149.301C3097.2 149.301 3090.5 156.001 3090.5 164.301C3090.5 172.601 3097.2 179.301 3105.5 179.301Z" fill="url(#copperGradientDark)" filter="url(#dotGlow5)"/>
+  <path id="pathCircuit8" d="M2755.8 255H3269.5L3376 361.5H3643.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M2756.5 270C2748.2 270 2741.5 263.3 2741.5 255C2741.5 246.7 2748.2 240 2756.5 240C2764.8 240 2771.5 246.7 2771.5 255C2771.5 263.3 2764.8 270 2756.5 270Z" fill="url(#copperGradientDark)" filter="url(#dotGlow6)"/>
+  <path id="pathCircuit9" d="M312.8 308H732.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M313.5 323C305.2 323 298.5 316.3 298.5 308C298.5 299.7 305.2 293 313.5 293C321.8 293 328.5 299.7 328.5 308C328.5 316.3 321.8 323 313.5 323Z" fill="url(#copperGradientDark)" filter="url(#dotGlow)"/>
+  <path d="M731.5 323C739.8 323 746.5 316.3 746.5 308C746.5 299.7 739.8 293 731.5 293C723.2 293 716.5 299.7 716.5 308C716.5 316.3 723.2 323 731.5 323Z" fill="url(#copperGradientDark)" filter="url(#dotGlow2)"/>
+  <path id="pathCircuit10" d="M693.3 385.699H522.5L422.6 490.999H246.3" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M692.6 370.699C700.9 370.699 707.6 377.399 707.6 385.699C707.6 393.999 700.9 400.699 692.6 400.699C684.3 400.699 677.6 393.999 677.6 385.699C677.6 377.399 684.3 370.699 692.6 370.699Z" fill="url(#copperGradientDark)" filter="url(#dotGlow3)"/>
+  <path d="M247 476C238.7 476 232 482.7 232 491C232 499.3 238.7 506 247 506C255.3 506 262 499.3 262 491C262 482.7 255.3 476 247 476Z" fill="url(#copperGradientDark)" filter="url(#dotGlow4)"/>
+  <path id="pathCircuit11" d="M573.8 439H1125.5L1164.5 400H1259.5L1328 331.5H1784.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M574.5 454C566.2 454 559.5 447.3 559.5 439C559.5 430.7 566.2 424 574.5 424C582.8 424 589.5 430.7 589.5 439C589.5 447.3 582.8 454 574.5 454Z" fill="url(#copperGradientDark)" filter="url(#dotGlow5)"/>
+  <path d="M1783.5 346.5C1791.8 346.5 1798.5 339.8 1798.5 331.5C1798.5 323.2 1791.8 316.5 1783.5 316.5C1775.2 316.5 1768.5 323.2 1768.5 331.5C1768.5 339.8 1775.2 346.5 1783.5 346.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow6)"/>
+  <path id="pathCircuit12" d="M1345.8 462H1695.5L1776 381.5H2632.5L2892.8 641.7H3276.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M1346.5 477C1338.2 477 1331.5 470.3 1331.5 462C1331.5 453.7 1338.2 447 1346.5 447C1354.8 447 1361.5 453.7 1361.5 462C1361.5 470.3 1354.8 477 1346.5 477Z" fill="url(#copperGradientDark)" filter="url(#dotGlow)"/>
+  <path d="M3275.5 656.801C3283.8 656.801 3290.5 650.101 3290.5 641.801C3290.5 633.501 3283.8 626.801 3275.5 626.801C3267.2 626.801 3260.5 633.501 3260.5 641.801C3260.5 650.101 3267.2 656.801 3275.5 656.801Z" fill="url(#copperGradientDark)" filter="url(#dotGlow2)"/>
+  <path id="pathCircuit13" d="M2971.8 601H3249.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M2972.5 616C2964.2 616 2957.5 609.3 2957.5 601C2957.5 592.7 2964.2 586 2972.5 586C2980.8 586 2987.5 592.7 2987.5 601C2987.5 609.3 2980.8 616 2972.5 616Z" fill="url(#copperGradientDark)" filter="url(#dotGlow3)"/>
+  <path d="M3248.5 616C3256.8 616 3263.5 609.3 3263.5 601C3263.5 592.7 3256.8 586 3248.5 586C3240.2 586 3233.5 592.7 3233.5 601C3233.5 609.3 3240.2 616 3248.5 616Z" fill="url(#copperGradientDark)" filter="url(#dotGlow4)"/>
+  <path id="pathCircuit14" d="M2776.8 438H3217.5L3388.4 608.9" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M2777.5 453C2769.2 453 2762.5 446.3 2762.5 438C2762.5 429.7 2769.2 423 2777.5 423C2785.8 423 2792.5 429.7 2792.5 438C2792.5 446.3 2785.8 453 2777.5 453Z" fill="url(#copperGradientDark)" filter="url(#dotGlow5)"/>
+  <path d="M3377.2 619C3383.1 624.9 3392.6 624.9 3398.5 619C3404.4 613.1 3404.4 603.6 3398.5 597.7C3392.6 591.8 3383.1 591.8 3377.2 597.7C3371.3 603.6 3371.3 613.1 3377.2 619Z" fill="url(#copperGradientDark)" filter="url(#dotGlow6)"/>
+  <path id="pathCircuit15" d="M1767.8 439H2478.5L2715.5 676H2926.5L3076.5 826H3200.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M1768.5 454C1760.2 454 1753.5 447.3 1753.5 439C1753.5 430.7 1760.2 424 1768.5 424C1776.8 424 1783.5 430.7 1783.5 439C1783.5 447.3 1776.8 454 1768.5 454Z" fill="url(#copperGradientDark)" filter="url(#dotGlow)"/>
+  <path d="M3199.5 841C3207.8 841 3214.5 834.3 3214.5 826C3214.5 817.7 3207.8 811 3199.5 811C3191.2 811 3184.5 817.7 3184.5 826C3184.5 834.3 3191.2 841 3199.5 841Z" fill="url(#copperGradientDark)" filter="url(#dotGlow2)"/>
+  <path id="pathCircuit16" d="M94.2998 552.5H539.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M95 567.5C86.7 567.5 80 560.8 80 552.5C80 544.2 86.7 537.5 95 537.5C103.3 537.5 110 544.2 110 552.5C110 560.8 103.3 567.5 95 567.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow3)"/>
+  <path d="M539 567.5C547.3 567.5 554 560.8 554 552.5C554 544.2 547.3 537.5 539 537.5C530.7 537.5 524 544.2 524 552.5C524 560.8 530.7 567.5 539 567.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow4)"/>
+  <path id="pathCircuit17" d="M62.2998 683.5H507.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M63 698.5C54.7 698.5 48 691.8 48 683.5C48 675.2 54.7 668.5 63 668.5C71.3 668.5 78 675.2 78 683.5C78 691.8 71.3 698.5 63 698.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow5)"/>
+  <path d="M507 698.5C515.3 698.5 522 691.8 522 683.5C522 675.2 515.3 668.5 507 668.5C498.7 668.5 492 675.2 492 683.5C492 691.8 498.7 698.5 507 698.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow6)"/>
+  <path id="pathCircuit18" d="M2281.3 795.5H2726.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M2282 810.5C2273.7 810.5 2267 803.8 2267 795.5C2267 787.2 2273.7 780.5 2282 780.5C2290.3 780.5 2297 787.2 2297 795.5C2297 803.8 2290.3 810.5 2282 810.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow)"/>
+  <path d="M2726 810.5C2734.3 810.5 2741 803.8 2741 795.5C2741 787.2 2734.3 780.5 2726 780.5C2717.7 780.5 2711 787.2 2711 795.5C2711 803.8 2717.7 810.5 2726 810.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow2)"/>
+  <path id="pathCircuit19" d="M1875.3 523.5H2320.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M1876 538.5C1867.7 538.5 1861 531.8 1861 523.5C1861 515.2 1867.7 508.5 1876 508.5C1884.3 508.5 1891 515.2 1891 523.5C1891 531.8 1884.3 538.5 1876 538.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow3)"/>
+  <path d="M2320 538.5C2328.3 538.5 2335 531.8 2335 523.5C2335 515.2 2328.3 508.5 2320 508.5C2311.7 508.5 2305 515.2 2305 523.5C2305 531.8 2311.7 538.5 2320 538.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow4)"/>
+  <path id="pathCircuit20" d="M1094.3 197.5H1539.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M1095 212.5C1086.7 212.5 1080 205.8 1080 197.5C1080 189.2 1086.7 182.5 1095 182.5C1103.3 182.5 1110 189.2 1110 197.5C1110 205.8 1103.3 212.5 1095 212.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow5)"/>
+  <path d="M1539 212.5C1547.3 212.5 1554 205.8 1554 197.5C1554 189.2 1547.3 182.5 1539 182.5C1530.7 182.5 1524 189.2 1524 197.5C1524 205.8 1530.7 212.5 1539 212.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow6)"/>
+  <path id="pathCircuit21" d="M926.3 258.5H1371.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M927 273.5C918.7 273.5 912 266.8 912 258.5C912 250.2 918.7 243.5 927 243.5C935.3 243.5 942 250.2 942 258.5C942 266.8 935.3 273.5 927 273.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow)"/>
+  <path d="M1371 273.5C1379.3 273.5 1386 266.8 1386 258.5C1386 250.2 1379.3 243.5 1371 243.5C1362.7 243.5 1356 250.2 1356 258.5C1356 266.8 1362.7 273.5 1371 273.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow2)"/>
+  <path id="pathCircuit22" d="M805.3 308.5H1250.7" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M806 323.5C797.7 323.5 791 316.8 791 308.5C791 300.2 797.7 293.5 806 293.5C814.3 293.5 821 300.2 821 308.5C821 316.8 814.3 323.5 806 323.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow3)"/>
+  <path d="M1250 323.5C1258.3 323.5 1265 316.8 1265 308.5C1265 300.2 1258.3 293.5 1250 293.5C1241.7 293.5 1235 300.2 1235 308.5C1235 316.8 1241.7 323.5 1250 323.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow4)"/>
+  <path id="pathCircuit23" d="M483.8 601.001H898.5L1053.5 756.001H1168.5L1307 617.501H1996.5L2040.8 573.301H2290.5L2457.4 740.101H2888.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M484.5 616C476.2 616 469.5 609.3 469.5 601C469.5 592.7 476.2 586 484.5 586C492.8 586 499.5 592.7 499.5 601C499.5 609.3 492.8 616 484.5 616Z" fill="url(#copperGradientDark)" filter="url(#dotGlow5)"/>
+  <path d="M2887.5 755.201C2895.8 755.201 2902.5 748.501 2902.5 740.201C2902.5 731.901 2895.8 725.201 2887.5 725.201C2879.2 725.201 2872.5 731.901 2872.5 740.201C2872.5 748.501 2879.2 755.201 2887.5 755.201Z" fill="url(#copperGradientDark)" filter="url(#dotGlow6)"/>
+  <path id="pathCircuit24" d="M2324.8 843H2579.5L2690 953.5H2902.5L2992.2 863.7H3227.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M2325.5 858C2317.2 858 2310.5 851.3 2310.5 843C2310.5 834.7 2317.2 828 2325.5 828C2333.8 828 2340.5 834.7 2340.5 843C2340.5 851.3 2333.8 858 2325.5 858Z" fill="url(#copperGradientDark)" filter="url(#dotGlow)"/>
+  <path d="M3226.5 878.801C3234.8 878.801 3241.5 872.101 3241.5 863.801C3241.5 855.501 3234.8 848.801 3226.5 848.801C3218.2 848.801 3211.5 855.501 3211.5 863.801C3211.5 872.101 3218.2 878.801 3226.5 878.801Z" fill="url(#copperGradientDark)" filter="url(#dotGlow2)"/>
+  <path id="pathCircuit25" d="M2206.6 853.1L2354 1000.5H2497.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M2196.5 864.299C2190.6 858.399 2190.6 848.899 2196.5 842.999C2202.4 837.099 2211.9 837.099 2217.8 842.999C2223.7 848.899 2223.7 858.399 2217.8 864.299C2211.9 870.199 2202.4 870.199 2196.5 864.299Z" fill="url(#copperGradientDark)" filter="url(#dotGlow3)"/>
+  <path d="M2496.5 1015.5C2504.8 1015.5 2511.5 1008.8 2511.5 1000.5C2511.5 992.2 2504.8 985.5 2496.5 985.5C2488.2 985.5 2481.5 992.2 2481.5 1000.5C2481.5 1008.8 2488.2 1015.5 2496.5 1015.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow4)"/>
+  <path id="pathCircuit26" d="M1763.6 857.9L1826.5 795H1889.5L1955 860.5H2148.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M1774.8 868C1768.9 873.9 1759.4 873.9 1753.5 868C1747.6 862.1 1747.6 852.6 1753.5 846.7C1759.4 840.8 1768.9 840.8 1774.8 846.7C1780.7 852.6 1780.7 862.1 1774.8 868Z" fill="url(#copperGradientDark)" filter="url(#dotGlow5)"/>
+  <path d="M2147.5 875.5C2155.8 875.5 2162.5 868.8 2162.5 860.5C2162.5 852.2 2155.8 845.5 2147.5 845.5C2139.2 845.5 2132.5 852.2 2132.5 860.5C2132.5 868.8 2139.2 875.5 2147.5 875.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow6)"/>
+  <path id="pathCircuit27" d="M1712.8 683H1865.5L1967.5 785H2215.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M1713.5 698C1705.2 698 1698.5 691.3 1698.5 683C1698.5 674.7 1705.2 668 1713.5 668C1721.8 668 1728.5 674.7 1728.5 683C1728.5 691.3 1721.8 698 1713.5 698Z" fill="url(#copperGradientDark)" filter="url(#dotGlow)"/>
+  <path d="M2214.5 800C2222.8 800 2229.5 793.3 2229.5 785C2229.5 776.7 2222.8 770 2214.5 770C2206.2 770 2199.5 776.7 2199.5 785C2199.5 793.3 2206.2 800 2214.5 800Z" fill="url(#copperGradientDark)" filter="url(#dotGlow2)"/>
+  <path id="pathCircuit28" d="M1274.6 734.1L1375 834.5H1680.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M1264.5 745.299C1258.6 739.399 1258.6 729.899 1264.5 723.999C1270.4 718.099 1279.9 718.099 1285.8 723.999C1291.7 729.899 1291.7 739.399 1285.8 745.299C1279.9 751.199 1270.4 751.199 1264.5 745.299Z" fill="url(#copperGradientDark)" filter="url(#dotGlow3)"/>
+  <path d="M1679.5 849.5C1687.8 849.5 1694.5 842.8 1694.5 834.5C1694.5 826.2 1687.8 819.5 1679.5 819.5C1671.2 819.5 1664.5 826.2 1664.5 834.5C1664.5 842.8 1671.2 849.5 1679.5 849.5Z" fill="url(#copperGradientDark)" filter="url(#dotGlow4)"/>
+  <path id="pathCircuit29" d="M115.8 868H1016.5L1107.5 777H1227.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M116.5 883C108.2 883 101.5 876.3 101.5 868C101.5 859.7 108.2 853 116.5 853C124.8 853 131.5 859.7 131.5 868C131.5 876.3 124.8 883 116.5 883Z" fill="url(#copperGradientDark)" filter="url(#dotGlow5)"/>
+  <path d="M1226.5 792C1234.8 792 1241.5 785.3 1241.5 777C1241.5 768.7 1234.8 762 1226.5 762C1218.2 762 1211.5 768.7 1211.5 777C1211.5 785.3 1218.2 792 1226.5 792Z" fill="url(#copperGradientDark)" filter="url(#dotGlow6)"/>
+  <path id="pathCircuit30" d="M1330.8 922H1604.5L1832.5 1150H2259.5L2346 1063.5H2887.5L3021.8 929.3H3276.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M1331.5 937C1323.2 937 1316.5 930.3 1316.5 922C1316.5 913.7 1323.2 907 1331.5 907C1339.8 907 1346.5 913.7 1346.5 922C1346.5 930.3 1339.8 937 1331.5 937Z" fill="url(#copperGradientDark)" filter="url(#dotGlow)"/>
+  <path d="M3275.5 944.301C3283.8 944.301 3290.5 937.601 3290.5 929.301C3290.5 921.001 3283.8 914.301 3275.5 914.301C3267.2 914.301 3260.5 921.001 3260.5 929.301C3260.5 937.601 3267.2 944.301 3275.5 944.301Z" fill="url(#copperGradientDark)" filter="url(#dotGlow2)"/>
+  <path id="pathCircuit31" d="M1808.6 978.1L1912.5 1082H2169.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M1798.5 989.299C1792.6 983.399 1792.6 973.899 1798.5 967.999C1804.4 962.099 1813.9 962.099 1819.8 967.999C1825.7 973.899 1825.7 983.399 1819.8 989.299C1813.9 995.199 1804.4 995.199 1798.5 989.299Z" fill="url(#copperGradientDark)" filter="url(#dotGlow3)"/>
+  <path d="M2168.5 1097C2176.8 1097 2183.5 1090.3 2183.5 1082C2183.5 1073.7 2176.8 1067 2168.5 1067C2160.2 1067 2153.5 1073.7 2153.5 1082C2153.5 1090.3 2160.2 1097 2168.5 1097Z" fill="url(#copperGradientDark)" filter="url(#dotGlow4)"/>
+  <path id="pathCircuit32" d="M861.8 512H1387.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M862.5 527C854.2 527 847.5 520.3 847.5 512C847.5 503.7 854.2 497 862.5 497C870.8 497 877.5 503.7 877.5 512C877.5 520.3 870.8 527 862.5 527Z" fill="url(#copperGradientDark)" filter="url(#dotGlow5)"/>
+  <path d="M1386.5 527C1394.8 527 1401.5 520.3 1401.5 512C1401.5 503.7 1394.8 497 1386.5 497C1378.2 497 1371.5 503.7 1371.5 512C1371.5 520.3 1378.2 527 1386.5 527Z" fill="url(#copperGradientDark)" filter="url(#dotGlow6)"/>
+  <path id="pathCircuit33" d="M1349.8 398H1646.2" stroke="url(#copperGradient)" stroke-width="4" stroke-miterlimit="10"/>
+  <path d="M1350.5 413C1342.2 413 1335.5 406.3 1335.5 398C1335.5 389.7 1342.2 383 1350.5 383C1358.8 383 1365.5 389.7 1365.5 398C1365.5 406.3 1358.8 413 1350.5 413Z" fill="url(#copperGradientDark)" filter="url(#dotGlow)"/>
+  <path d="M1645.5 413C1653.8 413 1660.5 406.3 1660.5 398C1660.5 389.7 1653.8 383 1645.5 383C1637.2 383 1630.5 389.7 1630.5 398C1630.5 406.3 1637.2 413 1645.5 413Z" fill="url(#copperGradientDark)" filter="url(#dotGlow2)"/>
+  <g id="dataPackets">
+    <g id="packet1" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet2" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet3" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet4" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet5" filter="url(#packetBlur)" visibility="hidden">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet6" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet7" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet8" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet9" filter="url(#packetBlur)" visibility="hidden">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet10" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet11" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet12" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet13" filter="url(#packetBlur)" visibility="hidden">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet14" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet15" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet16" filter="url(#packetBlur)" visibility="hidden">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet17" filter="url(#packetBlur)" visibility="hidden">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet18" filter="url(#packetBlur)" visibility="hidden">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet19" filter="url(#packetBlur)" visibility="hidden">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet20" filter="url(#packetBlur)" visibility="hidden">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet21" filter="url(#packetBlur)" visibility="hidden">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet22" filter="url(#packetBlur)" visibility="hidden">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet23" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet24" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet25" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet26" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet27" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet28" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet29" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet30" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet31" filter="url(#packetBlur)">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet32" filter="url(#packetBlur)" visibility="hidden">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+    <g id="packet33" filter="url(#packetBlur)" visibility="hidden">
+      <ellipse rx="20" ry="9" fill="url(#copperGradient)"/>
+    </g>
+  </g>
 </svg>

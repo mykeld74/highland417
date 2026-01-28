@@ -7,7 +7,10 @@
 		error?: string;
 	}
 
-	let { action = '/api/contact', onSuccess } = $props<{ action?: string; onSuccess?: () => void }>();
+	let { action = '/api/contact', onSuccess } = $props<{
+		action?: string;
+		onSuccess?: () => void;
+	}>();
 
 	let submitting = $state(false);
 	let result: { type: 'success' | 'error'; message: string } | null = $state(null);
@@ -156,30 +159,6 @@
 	textarea {
 		resize: vertical;
 		min-height: 120px;
-	}
-
-	.submitButton {
-		font-family: 'Inter', sans-serif;
-		font-size: 1rem;
-		font-weight: 400;
-		letter-spacing: 0.1em;
-		color: var(--color-text);
-		background: transparent;
-		border: 1px solid var(--color-text);
-		padding: 0.75rem 2rem;
-		cursor: pointer;
-		transition: all 0.3s ease;
-		align-self: flex-start;
-	}
-
-	.submitButton:hover:not(:disabled) {
-		background: rgba(201, 166, 107, 0.1);
-		box-shadow: 0 0 15px rgba(201, 166, 107, 0.2);
-	}
-
-	.submitButton:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
 	}
 
 	.formMessage {

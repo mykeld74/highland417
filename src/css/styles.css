@@ -1,8 +1,9 @@
 :root {
 	--color-background: #0a0908;
-	--color-text: #edd1ae;
-	--color-accent: #BC6915;
+	--color-text: #d8cbb2;
+	--color-accent: #efe3c8;
 	--color-text-light: #f0e6d9;
+	--color-card-title: #d07a1f;
 }
 
 html,
@@ -48,8 +49,8 @@ p {
 	height: 200%;
 	pointer-events: none;
 	z-index: 1;
-	opacity: 0.75;
-	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.25' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+	opacity: 1;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 	mix-blend-mode: overlay;
 }
 
@@ -60,7 +61,7 @@ p {
 	inset: 0;
 	pointer-events: none;
 	z-index: 2;
-	background: radial-gradient(ellipse at 50% 50%, transparent 20%, rgba(0, 0, 0, 0.5) 100%);
+	background: radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 .grainBg * {
@@ -112,33 +113,11 @@ p {
 	opacity: 0.7;
 }
 
-.navButton {
-	font-size: 1rem;
-	font-weight: 400;
-	letter-spacing: 0.1em;
-	color: var(--color-text);
-	background: transparent;
-	border: 1px solid var(--color-text);
-	padding: 0.6rem 1.5rem;
-	cursor: pointer;
-	transition: all 0.3s ease;
-}
-
-.navButton:hover {
-	background: rgba(201, 166, 107, 0.1);
-	box-shadow: 0 0 15px rgba(201, 166, 107, 0.2);
-}
-
 /* Navigation Responsive */
 @media (max-width: 1024px) {
 	.navLinks {
 		gap: 1.5rem;
 		font-size: 1rem;
-	}
-
-	.navButton {
-		padding: 0.5rem 1rem;
-		font-size: 0.9rem;
 	}
 }
 
@@ -178,4 +157,113 @@ p {
 	line-height: 1.8;
 	color: var(--color-text);
 	max-width: 800px;
+}
+
+/* Buttons */
+.navButton {
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	color: var(--color-text);
+	background: transparent;
+	border: 1px solid var(--color-text);
+	padding: 0.6rem 1.5rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.navButton:hover {
+	background: rgba(201, 166, 107, 0.1);
+	box-shadow: 0 0 15px rgba(201, 166, 107, 0.2);
+}
+
+@media (max-width: 1024px) {
+	.navButton {
+		padding: 0.5rem 1rem;
+		font-size: 0.9rem;
+	}
+}
+
+.heroButton {
+	font-size: 1.1rem;
+	font-weight: 400;
+	letter-spacing: 0.15em;
+	color: var(--color-text);
+	background: transparent;
+	border: 1px solid var(--color-text);
+	padding: 1rem 2.5rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	align-self: flex-start;
+}
+
+.heroButton:hover {
+	background: rgba(201, 166, 107, 0.1);
+	box-shadow: 0 0 20px rgba(201, 166, 107, 0.15);
+}
+
+.cta {
+	font-size: 1.1rem;
+	font-weight: 400;
+	letter-spacing: 0.15em;
+	text-transform: none;
+	color: var(--color-text);
+	background: transparent;
+	border: 1px solid var(--color-text);
+	padding: 1rem 2.5rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+/* .cta:hover {
+	background: rgba(201, 166, 107, 0.1);
+	box-shadow: 0 0 20px rgba(201, 166, 107, 0.15);
+} */
+
+.submitButton {
+	font-family: 'Inter', sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	color: var(--color-text);
+	background: transparent;
+	border: 1px solid var(--color-text);
+	padding: 0.75rem 2rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	align-self: flex-start;
+}
+
+.submitButton:hover:not(:disabled) {
+	background: rgba(201, 166, 107, 0.1);
+	box-shadow: 0 0 15px rgba(201, 166, 107, 0.2);
+}
+
+.submitButton:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.closeBtn {
+	background: none;
+	border: none;
+	color: rgba(237, 209, 174, 0.7);
+	font-size: 1.5rem;
+	line-height: 1;
+	cursor: pointer;
+	padding: 0.25rem;
+}
+
+.closeBtn:hover {
+	color: var(--color-text);
+}
+
+.primaryCTA {
+	background: var(--color-background);
+	color: var(--color-card-title);
+	border-color: var(--color-card-title);
+	border-radius: 5px;
+	&:hover {
+		box-shadow: 0 0 12px var(--color-card-title);
+	}
 }

@@ -12,7 +12,11 @@
 			<a href="/services">Services</a>
 			<a href="/approach">Approach</a>
 			<a href="/contact">Contact</a>
-			<button type="button" class="navButton" onclick={() => consultationModalOpen.set(true)}>Schedule a Consultation</button>
+			<button
+				type="button"
+				class="navButton primaryCTA"
+				onclick={() => consultationModalOpen.set(true)}>Schedule a Consultation</button
+			>
 		</div>
 	</div>
 </nav>
