@@ -1,3 +1,11 @@
+<svelte:head>
+	<title>Our Approach | Highland 417</title>
+	<meta
+		name="description"
+		content="Technology should support people. Highland 417 balances security and usability with a thoughtful, long-term approach to business I.T."
+	/>
+</svelte:head>
+
 <section class="pageSection">
 	<div class="pageContainer">
 		<h1 class="pageTitle">Our Approach</h1>

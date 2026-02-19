@@ -3,6 +3,14 @@
 	import Icon from '$components/Icon.svelte';
 </script>
 
+<svelte:head>
+	<title>Highland 417 | Business I.T. Systems & Security</title>
+	<meta
+		name="description"
+		content="I.T. you don't have to think about. Highland 417 builds secure, reliable technology environments for organizations that depend on their systems to operate."
+	/>
+</svelte:head>
+
 <Hero />
 
 <section class="midSection">

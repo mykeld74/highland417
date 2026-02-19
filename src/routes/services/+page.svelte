@@ -1,3 +1,11 @@
+<svelte:head>
+	<title>Services | Highland 417</title>
+	<meta
+		name="description"
+		content="Secure systems, reliable infrastructure, ongoing stewardship, and managed projects. Business I.T. services designed to work quietly and reliably."
+	/>
+</svelte:head>
+
 <section class="pageSection">
 	<div class="pageContainer">
 		<h1 class="pageTitle">Business I.T. Systems & Security</h1>

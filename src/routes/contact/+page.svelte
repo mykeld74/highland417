@@ -3,6 +3,14 @@
 	import ContactForm from '$components/ContactForm.svelte';
 </script>
 
+<svelte:head>
+	<title>Contact | Highland 417</title>
+	<meta
+		name="description"
+		content="Get in touch with Highland 417 to start a conversation about your organization's I.T. systems and security needs."
+	/>
+</svelte:head>
+
 <section class="pageSection">
 	<div class="pageContainer">
 		<h1 class="pageTitle">Contact</h1>
